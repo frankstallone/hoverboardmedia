@@ -28,11 +28,22 @@ module.exports = function(grunt) {
 			]
 		},
 
+		favicons: {
+			options: {
+			  // Task-specific options go here.
+			},
+			icons: {
+			  src: 'app/images/hover-ball.png',
+			  dest: 'app/images/'
+			},
+		},
+
 		clean: {
 			dist: {
 				src: ['dist/*']
 			},
 		},
+		
 		copy: {
 			dist: {
 				files: [{
@@ -128,11 +139,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-usemin');
+	grunt.loadNpmTasks('grunt-favicons');
 
 	grunt.registerTask('build', ['sass']);
 	grunt.registerTask('default', ['build', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'favicons', 'copy:dist', 'usemin']);
 
 };
