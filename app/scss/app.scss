@@ -1,3 +1,63 @@
 @import "normalize";
 @import "settings";
 @import "foundation";
+
+header {
+	img {
+		margin-top:  $rem-base * 4;
+	}
+	h1 {
+		margin-top: $rem-base * 4;
+		line-height: 1.3em;
+	}
+	hr {
+		margin-top: $rem-base * 6;
+	}
+}
+
+main {
+	h2 {
+		font-size: $rem-base * 4;
+		font-weight: 400;
+		margin-top: $rem-base * 4;
+		margin-bottom: 0;
+	}
+	h3 {
+		font-weight: 400;
+		font-size: $rem-base * 1.5;
+		margin-bottom: $rem-base * 2;
+	}
+	span {
+		margin-top: -$rem-base * 2;
+		margin-bottom: $rem-base * 6;
+		display: block;
+		color: #ffb423;
+		font-size: $rem-base * 2;
+	}
+	article {
+		footer {
+			figure {
+				margin-top: $rem-base * 2;
+			}
+			aside {
+				margin-top: $rem-base * 2;
+			}
+			h4 {
+				font-weight: 400;
+			}
+			ul.inline-list {
+				margin-top: $rem-base / 2;
+				margin-left: $rem-base / 2;
+				li {
+					margin-left: $rem-base /2;
+					&:after {
+						content: ", "
+					}
+					&:last-child:after {
+						content: ""
+					}
+				}
+			}
+		}
+	}
+}

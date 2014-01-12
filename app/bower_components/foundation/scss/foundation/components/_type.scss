@@ -3,10 +3,10 @@
 $include-html-type-classes: $include-html-classes !default;
 
 // We use these to control header font styles
-$header-font-family: join("Open Sans", $body-font-family) !default;
-$header-font-weight: 300 !default;
+$header-font-family: join("elena-web-basic", $body-font-family) !default;
+$header-font-weight: 700 !default;
 $header-font-style: normal !default;
-$header-font-color: #222 !default;
+$header-font-color: #23221f !default;
 $header-line-height: 1.4 !default;
 $header-top-margin: .2rem !default;
 $header-bottom-margin: .5rem !default;
