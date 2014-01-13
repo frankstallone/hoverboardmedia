@@ -30,9 +30,23 @@ module.exports = function(grunt) {
 		favicons: {
 			icons: {
 			  src: 'app/images/hover-ball.png',
-			  dest: 'app/images/'
+			  dest: 'app/'
 			},
 		},
+
+		imagemin: {                          // Task
+		    dynamic: {                         // Another target
+		      options: {                       // Target options
+		        optimizationLevel: 7
+		      },
+		      files: [{
+		        expand: true,                  // Enable dynamic expansion
+		        cwd: 'dist/',                   // Src matches are relative to this path
+		        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+		        dest: 'dist/'                  // Destination path prefix
+		      }]
+		    }
+		  },
 
 		clean: {
 			dist: {
@@ -45,7 +59,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd:'app/',
-					src: ['css/**', 'js/**', 'images/**', 'fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
+					src: ['css/**', 'js/**', 'images/**', 'fonts/**', '**/*.html', '**/*.png', '**/*.ico', '!**/*.scss', '!bower_components/**'],
 					dest: 'dist/'
 				}, {
 					expand: true,
@@ -136,11 +150,14 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-usemin');
 	grunt.loadNpmTasks('grunt-favicons');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	grunt.registerTask('build', ['sass']);
 	grunt.registerTask('default', ['build', 'connect:app', 'watch']);
+	grunt.registerTask('favi', ['favicons']);
+	grunt.registerTask('imgmin', ['imagemin']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'favicons', 'copy:dist', 'imagemin', 'usemin']);
 
 };
