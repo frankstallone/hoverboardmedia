@@ -28,22 +28,26 @@ module.exports = function(grunt) {
 		},
 
 		favicons: {
+			options: {
+				trueColor: true,
+				html: 'app/index.html'
+			},
 			icons: {
 			  src: 'app/images/hover-ball.png',
 			  dest: 'app/'
 			},
 		},
 
-		imagemin: {                          // Task
-		    dynamic: {                         // Another target
-		      options: {                       // Target options
+		imagemin: {
+		    dynamic: {
+		      options: {
 		        optimizationLevel: 7
 		      },
 		      files: [{
-		        expand: true,                  // Enable dynamic expansion
-		        cwd: 'dist/',                   // Src matches are relative to this path
-		        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
-		        dest: 'dist/'                  // Destination path prefix
+		        expand: true,
+		        cwd: 'dist/',
+		        src: ['**/*.{png,jpg,gif}'],
+		        dest: 'dist/'
 		      }]
 		    }
 		  },
