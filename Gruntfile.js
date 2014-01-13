@@ -23,15 +23,11 @@ module.exports = function(grunt) {
 				jshintrc: '.jshintrc'
 			},
 			all: [
-				'Gruntfile.js',
 				'app/js/{,*/}*.js'
 			]
 		},
 
 		favicons: {
-			options: {
-			  // Task-specific options go here.
-			},
 			icons: {
 			  src: 'app/images/hover-ball.png',
 			  dest: 'app/images/'
@@ -40,7 +36,7 @@ module.exports = function(grunt) {
 
 		clean: {
 			dist: {
-				src: ['dist/*']
+				src: ['dist/*', '!**/sftp-config.json']
 			},
 		},
 		
@@ -145,6 +141,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['build', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'favicons', 'copy:dist', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'usemin']);
 
 };
