@@ -24,7 +24,7 @@ sub {
 	display: block;
 	i {
 		font-size: $rem-base * 4;
-		color: $third-color;
+		color: $secondary-color;
 	}
 }
 
@@ -38,19 +38,34 @@ main {
 		font-weight: 400;
 		margin-top: $rem-base * 12;
 		margin-bottom: 0;
+		@media #{$small-only} {
+			font-size: $rem-base * 2;
+		}
 	}
 	h3 {
 		font-size: $rem-base * 2;
+		@media #{$medium-only} {
+			font-size: $rem-base *1.5;
+		}
+		@media #{$small-only} {
+			font-size: $rem-base + 6;
+		}
 		font-weight: 400;
 		margin-bottom: $rem-base * 2;
-		a, a:visited {
-			color: $third-color;
-		}
-		a:hover, a:active, a:focus {
-			color: $secondary-color;
-		}
 		small {
 			margin-top: 15px;
+			a, a:visited {
+				color: $third-color;
+			}
+			a:hover, a:active, a:focus {
+				color: $secondary-color;
+			}
+			@media #{$medium-only} {
+				margin-top: 12px;
+			}
+			@media #{$small-only} {
+				margin-top: 9px;
+			}
 		}
 	}
 	span {
@@ -58,6 +73,13 @@ main {
 		display: block;
 		color: $secondary-color;
 		font-size: $rem-base * 2;
+		a, a:visited {
+			color: $third-color;			
+		}
+		@media #{$small-only} {
+			margin-top: -$rem-base;
+			font-size: $rem-base;
+		}
 	}
 	article {
 		margin-top: $rem-base * 12;
@@ -65,20 +87,30 @@ main {
 		footer {
 			text-transform: uppercase;
 			letter-spacing: 1px;
+			i {
+				font-size: $rem-base * 2;
+			}
 			figure {
 				margin-top: $rem-base * 2;
+				@media #{$small-only} {
+					margin-top: $rem-base / 2;
+				}
 			}
 			aside {
 				margin-top: $rem-base * 2;
-			}
-			h4 {
-				font-weight: 400;
+				@media #{$small-only} {
+					margin-top: $rem-base / 2;
+				}
 			}
 			ul.inline-list {
 				font-size: $rem-base - 2;
-				margin-top: $rem-base / 2;
-				margin-left: $rem-base / 2;
+				margin-bottom: 0;
+				margin-top: $rem-base;
+				overflow: visible;
 				li {
+					&:first-child {
+						margin-top: -$rem-base / 2;
+					}
 					margin-left: $rem-base / 2;
 				}
 			}

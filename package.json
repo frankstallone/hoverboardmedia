@@ -1,11 +1,11 @@
 {
-  "name": "zf5_project",
+  "name": "Hoverboard Media",
   "description": "",
-  "version": "0.0.1",
-  "homepage": "",
+  "version": "1.1.0",
+  "homepage": "http://hoverboardmedia.com",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Frank Stallone III",
+    "email": "iamfrankstallone@gmail.com"
   },
   "repository": {
     "type": "git",
