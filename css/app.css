@@ -4919,7 +4919,7 @@ sub {
   display: block; }
   sub i {
     font-size: 64px;
-    color: #747167; }
+    color: #ffb423; }
 
 main a:hover, main a:focus, main a:active {
   color: #ffb423;
@@ -4929,39 +4929,69 @@ main h2 {
   font-weight: 400;
   margin-top: 192px;
   margin-bottom: 0; }
+  @media only screen and (max-width: 40em) {
+    main h2 {
+      font-size: 32px; } }
 main h3 {
   font-size: 32px;
   font-weight: 400;
   margin-bottom: 32px; }
-  main h3 a, main h3 a:visited {
-    color: #747167; }
-  main h3 a:hover, main h3 a:active, main h3 a:focus {
-    color: #ffb423; }
+  @media only screen and (min-width:40.063em) and (max-width:64em) {
+    main h3 {
+      font-size: 24px; } }
+  @media only screen and (max-width: 40em) {
+    main h3 {
+      font-size: 22px; } }
   main h3 small {
     margin-top: 15px; }
+    main h3 small a, main h3 small a:visited {
+      color: #747167; }
+    main h3 small a:hover, main h3 small a:active, main h3 small a:focus {
+      color: #ffb423; }
+    @media only screen and (min-width:40.063em) and (max-width:64em) {
+      main h3 small {
+        margin-top: 12px; } }
+    @media only screen and (max-width: 40em) {
+      main h3 small {
+        margin-top: 9px; } }
 main span {
   margin-top: -32px;
   display: block;
   color: #ffb423;
   font-size: 32px; }
+  main span a, main span a:visited {
+    color: #747167; }
+  @media only screen and (max-width: 40em) {
+    main span {
+      margin-top: -16px;
+      font-size: 16px; } }
 main article {
   margin-top: 192px;
   margin-bottom: 192px; }
   main article footer {
     text-transform: uppercase;
     letter-spacing: 1px; }
+    main article footer i {
+      font-size: 32px; }
     main article footer figure {
       margin-top: 32px; }
+      @media only screen and (max-width: 40em) {
+        main article footer figure {
+          margin-top: 8px; } }
     main article footer aside {
       margin-top: 32px; }
-    main article footer h4 {
-      font-weight: 400; }
+      @media only screen and (max-width: 40em) {
+        main article footer aside {
+          margin-top: 8px; } }
     main article footer ul.inline-list {
       font-size: 14px;
-      margin-top: 8px;
-      margin-left: 8px; }
+      margin-bottom: 0;
+      margin-top: 16px;
+      overflow: visible; }
       main article footer ul.inline-list li {
         margin-left: 8px; }
+        main article footer ul.inline-list li:first-child {
+          margin-top: -8px; }
 
 footer {
   margin-top: 192px;
