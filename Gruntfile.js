@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 
 		clean: {
 			dist: {
-				src: ['dist/*', '!**/sftp-config.json']
+				src: ['dist/*', '!**/sftp-config.json', '!**/README.md']
 			},
 		},
 		
