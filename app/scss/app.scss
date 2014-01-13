@@ -110,6 +110,7 @@ main {
 				li {
 					&:first-child {
 						margin-top: -$rem-base / 2;
+						margin-left: 1.375rem;
 					}
 					margin-left: $rem-base / 2;
 				}
