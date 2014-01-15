@@ -130,7 +130,7 @@ module.exports = function(grunt) {
 			app: {
 				options: {
 					port: 9000,
-					base: 'app/',
+					base: ['.', 'app/'],
 					livereload: true
 				}
 			},
