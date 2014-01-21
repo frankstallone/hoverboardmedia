@@ -2,27 +2,27 @@
 @import "settings";
 @import "foundation";
 
-$third-color: #747167;
+
+.wrapper {
+	background: lighten($fifth-color, 30%);
+	border-bottom: 10px solid lighten($fifth-color, 45%);
+}
 
 header {
 	img {
 		margin-top:  $rem-base * 4;
 	}
 	h1 {
-		margin-top: $rem-base * 12;
-		margin-bottom: $rem-base * 12;
-		line-height: 1.3em;
-		// font-weight: 400;
-		// font-style: italic;
-	}
-	hr {
 		margin-top: $rem-base * 6;
+		margin-bottom: $rem-base * 6;
+		line-height: 1.3em;
 	}
 }
 
 sub {
 	display: block;
 	i {
+		margin-top: $rem-base * 6;
 		font-size: $rem-base * 4;
 		color: $secondary-color;
 	}
@@ -36,7 +36,7 @@ main {
 	h2 {
 		font-size: $rem-base * 4;
 		font-weight: 400;
-		margin-top: $rem-base * 12;
+		margin-top: $rem-base * 6;
 		margin-bottom: 0;
 		@media #{$small-only} {
 			font-size: $rem-base * 2;
@@ -56,8 +56,8 @@ main {
 		}
 	}
 	article {
-		margin-top: $rem-base * 12;
-		margin-bottom: $rem-base * 12;
+		margin-top: $rem-base * 6;
+		margin-bottom: $rem-base * 6;
 		header {
 			h3 {
 				font-size: $rem-base * 2;
@@ -96,7 +96,7 @@ main {
 			}
 			figure {
 				margin-top: $rem-base * 2;
-				margin-bottom: $rem-base * 2;
+				margin-bottom: $rem-base * 6;
 				@media #{$small-only} {
 					margin-top: $rem-base / 2;
 					margin-bottom: 4px;
@@ -104,7 +104,7 @@ main {
 			}
 			aside {
 				margin-top: $rem-base * 3.5;
-				margin-bottom: $rem-base * 2;
+				margin-bottom: $rem-base * 6;
 				letter-spacing: 1px;
 				text-transform: uppercase;
 				text-align: right;
@@ -135,9 +135,51 @@ main {
 				}
 			}
 		}
+		footer {
+			background: none;
+		}
 	}
 }
 footer {
-	margin-top: $rem-base * 12;
-	margin-bottom: $rem-base * 12;
+	background: lighten($primary-color, 15%);
+	border-top: 10px solid lighten($primary-color, 25%);
+	padding-top: $rem-base * 6;
+	padding-bottom: $rem-base * 6;
+}
+
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(8%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+
+  50% {
+    -webkit-transform: translateY(8%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0%);
+  }
 }
