@@ -1,0 +1,161 @@
+<!doctype html>
+<!--[if IE 9]>    <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPC Lead Dashboard | Lead View</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <header class="hero-unit">
+      <div class="row">
+        <i class="fa fa-tachometer"></i>
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns radius">
+          <h1>PPC Lead Dashboard <small>Martindale-Hubbell</small></h1>
+          <h4>Lead Name | MHID | Lead # <strong>9852984</strong></h4>
+        </div><!-- /small-12 small-centered medium-12 medium-centered large-12 large-centered columns radius -->
+        <div class="small-12 medium-6 large-6">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="lawfirm.html">Law Firm</a></li>
+            <li><a href="lead_name.html">Lead Name</a></li>
+            <li class="current"><a href="#">Lead # 9852984</a></li>
+          </ul>
+        </div>
+      </div><!-- /row -->
+    </header>
+    <article>
+      <form data-abide action="">
+        <div class="row">
+          <div class="small-12 medium-8 large-8 columns radius">
+            <h2>Essential Information</h2>
+            <div class="row">
+              <div class="small-12 medium-12 large-12 columns radius">
+                <label><h5>Lead Name</h5></label>
+                <input type="text" placeholder="Barney Ross" autofocus>
+                <label><h5>Address</h5></label>
+                <input type="text" placeholder="121 Chanlon Road, New Providence, NJ 07974">
+                <div class="row">
+                  <div class="small-12 medium-6 large-4 columns radius">
+                    <label><h5>Phone 1</h5></label>
+                    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890" required>
+                    <small class="error">Format: 123-456-7890</small>
+                  </div>
+                  <div class="small-12 medium-6 large-4 columns radius">
+                    <label><h5>Phone 2</h5></label>
+                    <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890" required>
+                    <small class="error">Format: 123-456-7890</small>
+                  </div>
+                  <div class="small-12 medium-6 large-4 columns radius">
+                    <label><h5>Email</h5></label>
+                    <input type="email" placeholder="barney.ross@gmail.com" required>
+                    <small class="error">Format: this@that.com</small>
+                  </div>
+                </div>
+                <hr>
+              </div><!-- /small-12 medium-12 large-12 columns radius -->
+            </div><!-- /row -->
+            <div class="row statusQuestions">
+              <div class="small-12 medium-12 large-12 columns radius">
+                <h2>Questions <small>updates the status of the lead</small></h2>
+              </div>
+              <div class="small-12 medium-6 large-6 columns radius">
+                <div class="panel radius">
+                  <label><h5>Did the firm respond to the lead?</h5></label>
+                  <input type="radio" name="ppcRespond" value="Yes" id="ppcYes"><label for="ppcYes">Yes</label>
+                  <input type="radio" name="ppcRespond" value="No" id="ppcNo"><label for="ppcNo">No</label>
+                </div>
+              </div><!-- /small-12 medium-6 large-6 columns radius -->
+              <div class="small-12 medium-6 large-6 columns radius noResponse">
+                <div class="panel radius">
+                  <label><h5>The firm did not respond.</h5></label>
+                  <select name="whyNoResponse" disabled>
+                   <option value="spam">This was spam</option>
+                   <option value="moreTime">Firm needs more time</option>
+                  </select>
+                </div>
+              </div><!-- /small-12 medium-6 large-6 columns radius noResponse-->
+              <div class="small-12 medium-6 large-6 columns radius">
+                <div class="panel radius">
+                  <label><h5>Consultation set?</h5></label>
+                  <input type="radio" name="ppcConsult" value="Yes" id="ppcConsult"><label for="ppcConsult">Yes</label>
+                  <input type="radio" name="ppcConsult" value="Not Yet" id="ppcConsultNo"><label for="ppcConsultNo">Not Yet</label>
+                  <input type="radio" name="ppcConsult" value="No Show" id="ppcNoShow"><label for="ppcNoShow">No Show</label>
+                </div>
+              </div><!-- /small-12 medium-6 large-6 columns radius -->
+              <div class="small-12 medium-6 large-6 columns radius">
+                <div class="panel radius">
+                  <label><h5>Do we have a court case?</h5></label>
+                  <input type="radio" name="ppcCase" value="Court Date Set" id="ppcCourtDateSet"><label for="ppcCourtDateSet">Date Set</label>
+                  <input type="radio" name="ppcCase" value="Court Date Set" id="ppcCourtDateNotSet"><label for="ppcCourtDateNotSet">No Date Set</label>
+                </div>
+              </div><!-- /small-12 medium-6 large-6 columns radius -->
+              <div class="small-12 medium-12 large-12 columns radius">
+                <hr>
+                <h2>Payout Information</h2>
+              </div><!-- /small-12 medium-12 large-12 columns radius -->
+              <div class="small-12 medium-6 large-6 columns radius">
+                <label><h5>Total Payment Received</h5></label>
+                <input type="text" placeholder="$100,000">
+                <label><h5>Total Time for Settlement</h5></label>
+                <input type="text" placeholder="40 days &amp; 40 nights">
+              </div><!-- /small-12 medium-6 large-6 columns radius -->
+              <div class="small-12 medium-6 large-6 columns radius">
+                <label><h5>Total Time for Payout</h5></label>
+                <input type="text" placeholder="40 days &amp; 40 nights">
+              </div><!-- /small-12 medium-6 large-6 columns radius -->
+              <div class="small-12 medium-12 large-12 columns radius">
+                <hr>
+                <h2>Note Area</h2>
+                <div class="panel radius">
+                  <label><h5>Title</h5></label>
+                  <input type="text" placeholder="Phone Conversation @ January 6, 2014, 11:12 AM">
+                  <label><h5>Note Details</h5></label>
+                  <textarea name="Notes" id="Notes" placeholder="Firm called but has not setup a consultation..."></textarea>
+                  <a href="#" class="button">Save Note</a>
+                </div>
+                <hr>
+                <div class="notesHistory">
+                  <h4>Note History<small> in descending order</small></h4>
+                  <ul>
+                    <li><a href="#">Follow up: Conversation with partners</a> <br><small>January 3, 2014, 2:31 PM</small></li>
+                    <li><a href="#">Notes from Initial Call</a> <br><small>January 3, 2014, 2:31 PM</small></li>
+                  </ul>
+                </div>
+              </div><!-- /small-12 medium-12 large-12 columns radius -->  
+            </div><!-- /row -->
+          </div><!-- /small-12 medium-8 large-8 columns radius -->
+          <div class="small-12 medium-4 large-4 columns radius sidebar">
+            <div class="panel radius updatestatus callout"><h4>Status: <small>Unconfirmed Lead</small></h4></div>
+            <div class="progress secondary round"><span class="meter" style="width: 10%;"></span></div>
+            <div class="panel radius callout">
+              <h4>Lead Details <small>contact information</small></h4>
+              <hr>
+              <h5>Name</h5> <p>Barney Ross</p>
+              <h5>Phone</h5> <p>123-456-7890</p>
+              <h5>Address</h5> <address>121 Chanlon Road, New Providence, NJ 07974</address></p>
+              <h5>Email</h5> <p><a href="mailto:barney.ross@gmail.com">barney.ross@gmail.com</a></p>
+              <h5>Initial Communication</h5> <p>Call Tracking Number</p>
+              <h5>Created <small>January 3, 2014, 2:30 PM</small></h5></p>
+              <h5>Last Updated <small>January 21, 2014, 9:44 AM</small></h5></p>
+            </div><!-- /panel radius callout-->
+          </div><!-- /small-12 medium-4 large-4 columns radius sidebar -->
+        </div><!-- /row -->
+      </form>
+    </article>
+    <footer>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns radius">
+          <img src="images/md-logo.png" alt="Martindale-Hubbell &reg; 2013-2014">
+        </div>
+      </div>
+    </footer>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
