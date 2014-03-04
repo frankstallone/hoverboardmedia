@@ -6,6 +6,18 @@
 .wrapper {
 	background: lighten($fifth-color, 30%);
 	border-bottom: 10px solid lighten($fifth-color, 45%);
+	nav {
+		margin-top: $rem-base;
+		color: darken($fifth-color, 20%);
+		li.title {
+			text-transform: uppercase;
+			font-size: $rem-base / 2;
+			margin-top: $rem-base / 2 + 1;
+		}
+	}
+	a, a:visited {
+		color: darken($fifth-color, 15%);
+	}
 }
 
 header {
@@ -17,6 +29,19 @@ header {
 		margin-bottom: $rem-base * 6;
 		line-height: 1.3em;
 	}
+	h2 {
+		sup {
+			display: block;
+			font-size: $rem-base;
+			top: $rem-base + 4;
+			color: darken($secondary-color, 40%);
+			text-transform: uppercase;
+			@media #{$small-only} {
+				font-size: $rem-base - 4;
+				top: $rem-base / 2;
+			}
+		}
+	}
 }
 
 sub {
@@ -27,6 +52,7 @@ sub {
 		color: $secondary-color;
 	}
 }
+
 
 main {
 	a:hover, a:focus, a:active {
@@ -97,6 +123,7 @@ main {
 			figure {
 				margin-top: $rem-base * 2;
 				margin-bottom: $rem-base * 6;
+				text-align: left;
 				@media #{$small-only} {
 					margin-top: $rem-base / 2;
 					margin-bottom: 4px;
@@ -137,14 +164,23 @@ main {
 		}
 		footer {
 			background: none;
+			border-top: none;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		.fa-cogs {
+			font-size: $rem-base * 2;
+			color: #ccc;
 		}
 	}
 }
+
 footer {
-	background: lighten($primary-color, 15%);
+	background: lighten($primary-color, 35%);
 	border-top: 10px solid lighten($primary-color, 25%);
 	padding-top: $rem-base * 6;
 	padding-bottom: $rem-base * 6;
+	text-transform: uppercase;
 }
 
 .floating {

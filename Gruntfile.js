@@ -45,9 +45,9 @@ module.exports = function(grunt) {
 		      },
 		      files: [{
 		        expand: true,
-		        cwd: 'dist/',
+		        cwd: 'app/',
 		        src: ['**/*.{png,jpg,gif}'],
-		        dest: 'dist/'
+		        dest: 'app/'
 		      }]
 		    }
 		  },
@@ -156,6 +156,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('imgmin', ['imagemin']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'imagemin', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'imagemin', 'useminPrepare', 'copy:dist', 'usemin']);
 
 };

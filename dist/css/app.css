@@ -4909,6 +4909,15 @@ th.hide-for-touch {
 .wrapper {
   background: #73fab4;
   border-bottom: 10px solid #bdfcdc; }
+  .wrapper nav {
+    margin-top: 16px;
+    color: #046a35; }
+    .wrapper nav li.title {
+      text-transform: uppercase;
+      font-size: 8px;
+      margin-top: 9px; }
+  .wrapper a, .wrapper a:visited {
+    color: #058242; }
 
 header img {
   margin-top: 64px; }
@@ -4916,6 +4925,16 @@ header h1 {
   margin-top: 96px;
   margin-bottom: 96px;
   line-height: 1.3em; }
+header h2 sup {
+  display: block;
+  font-size: 16px;
+  top: 20px;
+  color: #563800;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 40em) {
+    header h2 sup {
+      font-size: 12px;
+      top: 8px; } }
 
 sub {
   display: block; }
@@ -4981,7 +5000,8 @@ main article {
         font-size: 14px; } }
   main article header figure {
     margin-top: 32px;
-    margin-bottom: 96px; }
+    margin-bottom: 96px;
+    text-align: left; }
     @media only screen and (max-width: 40em) {
       main article header figure {
         margin-top: 8px;
@@ -5015,13 +5035,20 @@ main article {
         margin-top: 2px;
         margin-left: 1.375rem; }
   main article footer {
-    background: none; }
+    background: none;
+    border-top: none;
+    padding-top: 0;
+    padding-bottom: 0; }
+  main article .fa-cogs {
+    font-size: 32px;
+    color: #cccccc; }
 
 footer {
-  background: #ffa970;
+  background: #ffe6d6;
   border-top: 10px solid #ffc8a3;
   padding-top: 96px;
-  padding-bottom: 96px; }
+  padding-bottom: 96px;
+  text-transform: uppercase; }
 
 .floating {
   animation-name: floating;
