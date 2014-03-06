@@ -22,6 +22,7 @@
     "grunt-usemin": "~2.0.2",
     "grunt-sass": "~0.9.0",
     "grunt-favicons": "~0.6.0",
-    "grunt-contrib-imagemin": "~0.4.1"
+    "grunt-contrib-imagemin": "~0.4.1",
+    "grunt-autoprefixer": "~0.7.2"
   }
 }

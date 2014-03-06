@@ -18,6 +18,18 @@ module.exports = function(grunt) {
 			}
 		},
 
+		grunt.initConfig({
+		  autoprefixer: {
+		    options: {
+		      browsers: ['last 2 version']
+		    },
+		    your_target: {
+		      src: 'app/css/app.css',
+		      dest: 'app/css/app.css'
+		    },
+		  },
+		},
+
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc'
@@ -149,6 +161,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-usemin');
 	grunt.loadNpmTasks('grunt-favicons');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 
 	grunt.registerTask('build', ['sass']);
 	grunt.registerTask('default', ['build', 'connect:app', 'watch']);
@@ -156,6 +169,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('imgmin', ['imagemin']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'validate-js', 'imagemin', 'useminPrepare', 'copy:dist', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'build', 'autoprefixer', 'validate-js', 'imagemin', 'useminPrepare', 'copy:dist', 'usemin']);
 
 };
