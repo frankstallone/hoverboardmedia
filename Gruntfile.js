@@ -18,16 +18,13 @@ module.exports = function(grunt) {
 			}
 		},
 
-		grunt.initConfig({
-		  autoprefixer: {
-		    options: {
-		      browsers: ['last 2 version']
-		    },
-		    your_target: {
-		      src: 'app/css/app.css',
-		      dest: 'app/css/app.css'
-		    },
-		  },
+		autoprefixer: {
+			options: {
+			  browsers: ['last 2 version']
+			},
+			targets: {
+			  src: 'app/css/app.css'
+			},
 		},
 
 		jshint: {
@@ -122,7 +119,7 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				files: 'app/scss/{,*/}*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'autoprefixer']
 			},
 			livereload: {
 				files: ['app/*.html', 'app/js/{,*/}*.js', 'app/css/{,*/}*.css', 'app/images/{,*/}*.{jpg,gif,svg,jpeg,png}'],
@@ -163,12 +160,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 
-	grunt.registerTask('build', ['sass']);
+	grunt.registerTask('build', ['sass', 'autoprefixer']);
 	grunt.registerTask('default', ['build', 'connect:app', 'watch']);
 	grunt.registerTask('favi', ['favicons']);
 	grunt.registerTask('imgmin', ['imagemin']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'build', 'autoprefixer', 'validate-js', 'imagemin', 'useminPrepare', 'copy:dist', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'build', 'autoprefixer', 'validate-js', /*'imagemin',*/ 'useminPrepare', 'copy:dist', 'usemin']);
 
 };

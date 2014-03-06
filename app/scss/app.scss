@@ -23,6 +23,8 @@
 header {
 	img {
 		margin-top:  $rem-base * 6;
+		/* animation syntax shorthand order: name duration timing-function delay iteration-count direction fill-mode */
+		animation: hoverin 2s ease-out 1s backwards;
 	}
 	h1 {
 		margin-top: $rem-base * 6;
@@ -183,42 +185,42 @@ footer {
 	text-transform: uppercase;
 }
 
-.floating {
-  animation-name: floating;
-  -webkit-animation-name: floating;
-  animation-duration: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-}
+// .floating {
+//   animation-name: floating;
+//   -webkit-animation-name: floating;
+//   animation-duration: 1.5s;
+//   -webkit-animation-duration: 1.5s;
+//   animation-iteration-count: infinite;
+//   -webkit-animation-iteration-count: infinite;
+// }
 
-@keyframes floating {
-  0% {
-    transform: translateY(0%);
-  }
+// @keyframes floating {
+//   0% {
+//     transform: translateY(0%);
+//   }
 
-  50% {
-    transform: translateY(8%);
-  }
+//   50% {
+//     transform: translateY(8%);
+//   }
 
-  100% {
-    transform: translateY(0%);
-  }
-}
+//   100% {
+//     transform: translateY(0%);
+//   }
+// }
 
-@-webkit-keyframes floating {
-  0% {
-    -webkit-transform: translateY(0%);
-  }
+// @-webkit-keyframes floating {
+//   0% {
+//     -webkit-transform: translateY(0%);
+//   }
 
-  50% {
-    -webkit-transform: translateY(8%);
-  }
+//   50% {
+//     -webkit-transform: translateY(8%);
+//   }
 
-  100% {
-    -webkit-transform: translateY(0%);
-  }
-}
+//   100% {
+//     -webkit-transform: translateY(0%);
+//   }
+// }
 
 /* 
  * Safe Haven Case Study 
@@ -283,4 +285,15 @@ footer {
 		}
 	}
 
+}
+
+@keyframes hoverin {
+	0% {
+		opacity: 0;
+		transform: translateY(-220px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
