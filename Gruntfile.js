@@ -166,6 +166,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('imgmin', ['imagemin']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-	grunt.registerTask('publish', ['clean:dist', 'build', 'autoprefixer', 'validate-js', /*'imagemin',*/ 'useminPrepare', 'copy:dist', 'usemin']);
+	grunt.registerTask('publish', ['clean:dist', 'build', 'autoprefixer', 'validate-js', 'imagemin', 'useminPrepare', 'copy:dist', 'usemin']);
 
 };
