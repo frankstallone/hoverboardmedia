@@ -219,3 +219,68 @@ footer {
     -webkit-transform: translateY(0%);
   }
 }
+
+/* 
+ * Safe Haven Case Study 
+ *
+ */
+
+.shc {
+	.wrapper {
+		header {
+			img {
+				margin-top: $rem-base;
+				margin-bottom: $rem-base;
+				margin-right: $rem-base;
+			}
+			h5, h4 {
+				display: inline-block;
+			}
+			h4 {
+				margin-right: $rem-base / 2;
+			}
+			h5 {
+				font-weight: 300;
+			}
+			@media #{$small-only}{
+				text-align: center;
+			}
+			@media #{$medium-only} {
+				text-align: center;
+			}
+		}
+	}
+	article {
+		header {
+			text-align: center;
+			margin-bottom: $rem-base * 6;
+			h1 {
+				margin-bottom: $rem-base / 6;
+				margin-top: $rem-base;
+				line-height: $rem-base * 2;
+			}
+			h2 {
+				margin-top: 0;
+				margin-bottom: $rem-base * 3;
+				font-size: $rem-base * 2;
+			}
+			img {
+				margin-top: 0;
+				@media #{$small-only} {
+					width: 25%;
+				}
+			}
+			.talking-heads {
+				text-align: center;
+				img {
+					margin: $rem-base / 6;
+				}
+			}
+			ul.inline-list {
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+}

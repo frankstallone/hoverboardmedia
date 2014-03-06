@@ -5077,3 +5077,47 @@ footer {
 
   100% {
     -webkit-transform: translateY(0%); } }
+
+/* 
+ * Safe Haven Case Study 
+ *
+ */
+.shc .wrapper header img {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 16px; }
+.shc .wrapper header h5, .shc .wrapper header h4 {
+  display: inline-block; }
+.shc .wrapper header h4 {
+  margin-right: 8px; }
+.shc .wrapper header h5 {
+  font-weight: 300; }
+@media only screen and (max-width: 40em) {
+  .shc .wrapper header {
+    text-align: center; } }
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .shc .wrapper header {
+    text-align: center; } }
+.shc article header {
+  text-align: center;
+  margin-bottom: 96px; }
+  .shc article header h1 {
+    margin-bottom: 2.66667px;
+    margin-top: 16px;
+    line-height: 32px; }
+  .shc article header h2 {
+    margin-top: 0;
+    margin-bottom: 48px;
+    font-size: 32px; }
+  .shc article header img {
+    margin-top: 0; }
+    @media only screen and (max-width: 40em) {
+      .shc article header img {
+        width: 25%; } }
+  .shc article header .talking-heads {
+    text-align: center; }
+    .shc article header .talking-heads img {
+      margin: 2.66667px; }
+  .shc article header ul.inline-list {
+    letter-spacing: 1px;
+    text-transform: uppercase; }
