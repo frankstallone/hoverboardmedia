@@ -66,13 +66,13 @@ module.exports = function(grunt) {
 				src: ['dist/*', '!**/sftp-config.json', '!**/README.md']
 			},
 		},
-		
+
 		copy: {
 			dist: {
 				files: [{
 					expand: true,
 					cwd:'app/',
-					src: ['css/**', 'js/**', 'images/**', 'fonts/**', '**/*.html', '**/*.png', '**/*.ico', '!**/*.scss', '!bower_components/**'],
+					src: ['1/**', 'css/**', 'js/**', 'images/**', 'fonts/**', '**/*.html', '**/*.png', '**/*.ico', '!**/*.scss', '!bower_components/**'],
 					dest: 'dist/'
 				}, {
 					expand: true,
